@@ -12,14 +12,14 @@ description: ROS топики
 ```
 /bat
 /bhi360/imu
-/camera_info
+/camera1/camera_info
+/camera1/compressedDepth
+/camera1/image_compressed
+/camera1/image_raw
+/camera1/image_raw/theora
 /client_count
 /cmd_vel
 /connected_clients
-/image_raw
-/image_raw/compressed
-/image_raw/compressedDepth
-/image_raw/theora
 /image_raw/zstd
 /joy
 /joy/set_feedback
@@ -46,11 +46,12 @@ description: ROS топики
 
 **Топики камеры**
 ```
-/image_raw                     тип сообщения sensor_msgs/msg/Image
-/image_raw/compressed          тип сообщения sensor_msgs/msg/CompressedImage
-/image_raw/compressedDepth
-/image_raw/theora
-/image_raw/zstd
+/camera1/camera_info
+/camera1/compressedDepth
+/camera1/image_compressed       тип сообщения sensor_msgs/msg/CompressedImage
+/camera1/image_raw              тип сообщения sensor_msgs/msg/Image
+/camera1/image_raw/theora
+
 ```
 Топики, связанные с работой камеры.
 Для большинства задач обработки изображений и передачи видео обычно используются первые два топика:
